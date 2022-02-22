@@ -63,8 +63,6 @@ public class Project {
 
 
 
-
-
     public Date getUpdated_At() {
         return updated_At;
     }
@@ -84,4 +82,10 @@ public class Project {
         this.updated_At = new Date();
     }
 
+    public Project(Long id, String projectName, String projectIdentifier, String description) {
+        this.id = id;
+        this.projectName = projectName;
+        this.projectIdentifier = projectIdentifier;
+        this.description = description;
+    }
 }

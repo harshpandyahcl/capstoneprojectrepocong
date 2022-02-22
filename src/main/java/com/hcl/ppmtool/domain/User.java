@@ -2,6 +2,7 @@ package com.hcl.ppmtool.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -43,6 +45,13 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "user", orphanRemoval = true)
     private List<Project> projects = new ArrayList<>();
 
+
+    public User(Long id, String username, String fullName, String password) {
+        this.id = id;
+        this.username = username;
+        this.fullName = fullName;
+        this.password = password;
+    }
 
     public List<Project> getProjects() {
         return projects;
@@ -95,4 +104,7 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }
+
