@@ -27,6 +27,7 @@ public class ProjectRepositoryTest {
     @Autowired
     private ProjectRepository projectRepository;
 
+    
     @BeforeEach
     void initUseCase() {
         List<Project> projects = Arrays.asList(

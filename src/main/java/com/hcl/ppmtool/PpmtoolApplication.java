@@ -25,7 +25,7 @@ public class PpmtoolApplication {
     }
     public static void main(String[] args) {
 
-        PropertyConfigurator.configure("C:\\Users\\James\\OneDrive\\Desktop\\Heroku Capstone\\Capstone2\\src\\main\\resources\\log4j.properties");
+        PropertyConfigurator.configure("src/main/resources/log4j.properties");
         logger.warn("DB accessed from Application..");
         SpringApplication.run(PpmtoolApplication.class, args);
 
