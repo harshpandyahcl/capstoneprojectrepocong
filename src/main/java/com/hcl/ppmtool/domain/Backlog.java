@@ -1,6 +1,6 @@
 package com.hcl.ppmtool.domain;
 
-//this is
+//this is demo
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
